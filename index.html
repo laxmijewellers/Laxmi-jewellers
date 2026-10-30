@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,18 +44,18 @@ footer{text-align:center;color:#85765e;font-size:12px;padding:24px 12px;border-t
 <main>
   <section class="intro">
     <h1>Jewellery Design Catalogue</h1>
-    <p>Apna pasandida design chuniye. Price aur availability ke liye WhatsApp par enquiry karein.</p>
+    <p>Explore our jewellery designs. Contact us on WhatsApp for prices and availability.</p>
   </section>
   <div class="searchrow">
-    <input id="search" placeholder="Design ya code search karein…" oninput="render()">
+    <input id="search" placeholder="Search by design name or code…" oninput="render()">
     <button class="light" onclick="document.getElementById('search').value='';render()">Clear</button>
   </div>
   <div class="categories" id="categories"></div>
   <section class="admin" id="admin">
     <h2>Owner Studio</h2>
-    <p class="hint">Demo login PIN: <b>2580</b>. Launch se pehle is demo PIN ko secure owner authentication se replace karna zaroori hai. Is prototype mein uploaded photos isi browser/device mein save hoti hain.</p>
+    <p class="hint">Demo login PIN: <b>2580</b>. Before launch, replace this demo PIN with secure owner authentication. In this prototype, uploaded photos are saved only in this browser/device.</p>
     <div id="loginbox">
-      <label>Owner demo PIN</label><input id="pin" type="password" inputmode="numeric" placeholder="PIN enter karein" style="margin:7px 0 10px">
+      <label>Owner Demo PIN</label><input id="pin" type="password" inputmode="numeric" placeholder="Enter PIN" style="margin:7px 0 10px">
       <button class="primary" onclick="login()">Unlock Upload Panel</button>
       <button class="light" onclick="hideAdmin()">Close</button>
       <p id="loginerror" class="hint"></p>
@@ -63,22 +63,39 @@ footer{text-align:center;color:#85765e;font-size:12px;padding:24px 12px;border-t
     <div id="uploadbox" style="display:none">
       <form id="productform">
         <div class="fields">
-          <div class="full"><label>Jewellery photo *</label><input id="photo" type="file" accept="image/*" required></div>
-          <div><label>Design name *</label><input id="name" placeholder="e.g. Gold Jhumka" required></div>
-          <div><label>Design code *</label><input id="code" placeholder="e.g. LJ-001" required></div>
+          <div class="full"><label>Jewellery Photo *</label><input id="photo" type="file" accept="image/*" required></div>
+          <div><label>Design Name *</label><input id="name" placeholder="e.g. Gold Jhumka" required></div>
+          <div><label>Design Code *</label><input id="code" placeholder="e.g. LJ-001" required></div>
           <div><label>Category *</label><select id="category"><option>Gold</option><option>Diamond</option><option>Earrings & Jhumka</option><option>Rings</option><option>Chains</option><option>Bangles</option><option>Bridal</option><option>Other</option></select></div>
-          <div><label>Short details (optional)</label><input id="details" placeholder="e.g. Traditional design"></div>
+          <div><label>Short Details (Optional)</label><input id="details" placeholder="e.g. Traditional Design"></div>
           <div class="full"><img id="preview" class="preview" alt="Photo preview"></div>
           <div class="full"><button class="primary" type="submit">＋ Add Design to Catalogue</button></div>
         </div>
       </form>
-      <p class="hint">Uploaded design card ke neeche delete button aayega. Public catalogue mein prices nahi dikhte.</p>
+      <p class="hint">A delete button will appear below each uploaded design. Prices are not displayed in the public catalogue.</p>
       <button class="light" onclick="logout()">Lock Owner Panel</button>
     </div>
   </section>
   <section class="grid" id="grid"></section>
 </main>
-<footer>© <span id="year"></span> LAXMI JEWELLERS · Jewellery designs for inspiration</footer>
+<footer>
+  <div style="font-weight:700;letter-spacing:1px;color:#76521a;margin-bottom:10px">LAXMI JEWELLERS</div>
+  <div style="display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;margin:10px 0 14px">
+    <a href="https://wa.me/919704185153" target="_blank" rel="noopener"
+       aria-label="Chat with Laxmi Jewellers on WhatsApp"
+       style="display:inline-flex;align-items:center;gap:7px;color:#267b4b;text-decoration:none;font-weight:700">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.8 11.8 0 0 0 12.13 0C5.58 0 .25 5.33.25 11.88c0 2.09.55 4.13 1.59 5.93L.15 24l6.34-1.66a11.9 11.9 0 0 0 5.64 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.23-6.15-3.5-8.42ZM12.14 21.76a9.86 9.86 0 0 1-5.02-1.37l-.36-.21-3.76.99 1-3.67-.24-.38a9.82 9.82 0 1 1 8.38 4.64Zm5.39-7.36c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.19.29-.75.95-.92 1.14-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.49.1-.19.05-.36-.02-.51-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.43s1.05 2.82 1.19 3.02c.15.19 2.06 3.14 4.99 4.4.7.3 1.24.48 1.66.61.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.27.17-1.39-.07-.12-.27-.19-.56-.34Z"/></svg>
+      <span>9704185153</span>
+    </a>
+    <a href="https://www.instagram.com/laxmi_jewells_/" target="_blank" rel="noopener"
+       aria-label="Follow Laxmi Jewellers on Instagram"
+       style="display:inline-flex;align-items:center;gap:7px;color:#9a4775;text-decoration:none;font-weight:700">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/></svg>
+      <span>@laxmi_jewells_</span>
+    </a>
+  </div>
+  © <span id="year"></span> LAXMI JEWELLERS · Jewellery designs for inspiration
+</footer>
 <div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
   <div class="modalbox"><h3 id="modalname"></h3><img id="modalphoto" style="width:100%;max-height:55vh;object-fit:contain;border-radius:10px;background:#efe4d0" alt="Jewellery design"><p id="modalinfo" class="hint"></p><div class="row"><button class="wa" style="flex:1" id="modalwa">Enquire on WhatsApp</button><button class="light" onclick="closeModal()">Close</button></div></div>
 </div>
@@ -93,7 +110,7 @@ const DEFAULTS=[
 let products=loadProducts(),active='All',owner=false,photoData='';
 const cats=['All','Gold','Diamond','Earrings & Jhumka','Rings','Chains','Bangles','Bridal','Other'];
 function loadProducts(){try{const v=localStorage.getItem(KEY);return v?JSON.parse(v):DEFAULTS}catch(e){return DEFAULTS}}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(products));return true}catch(e){alert('Browser storage full ho gaya. Chhoti photo use karein ya purane designs delete karein.');return false}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(products));return true}catch(e){alert('Browser storage is full. Use a smaller photo or delete older designs.');return false}}
 function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function setCategory(c){active=c;renderCats();render()}
 function renderCats(){document.getElementById('categories').innerHTML=cats.map(c=>`<button class="cat ${active===c?'active':''}" onclick="setCategory('${c.replace(/'/g,"\\'")}')">${esc(c)}</button>`).join('')}
@@ -104,16 +121,17 @@ function render(){
  <img class="photo" src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" onerror="this.style.opacity='.35';this.alt='Photo unavailable'">
  <div class="cardbody"><div class="cardtitle">${esc(p.name)}</div><div class="code">${esc(p.code)} · ${esc(p.category)}</div>
  <div class="cardactions"><button class="light" onclick="openDesign('${p.id}')">View Design</button><button class="wa" onclick="whatsapp('${p.id}')">WhatsApp</button></div>
- ${owner&&!p.id.startsWith('sample')?`<button class="light" style="width:100%;margin-top:7px;color:#9c2d22" onclick="removeProduct('${p.id}')">Delete design</button>`:''}</div></article>`).join(''):`<div class="empty"><b>Is category mein abhi design nahi hai.</b><br><br>Owner login karke apni jewellery photo add karein.</div>`;
+ ${owner&&!p.id.startsWith('sample')?`<button class="light" style="width:100%;margin-top:7px;color:#9c2d22" onclick="removeProduct('${p.id}')">Delete Design</button>`:''}</div></article>`).join(''):`<div class="empty"><b>There are no designs in this category yet.</b><br><br>The owner can log in to add jewellery photos.</div>`;
 }
 function showAdmin(){document.getElementById('admin').style.display='block';document.getElementById('admin').scrollIntoView({behavior:'smooth'})}
 function hideAdmin(){document.getElementById('admin').style.display='none'}
-function login(){if(document.getElementById('pin').value==='2580'){owner=true;document.getElementById('loginbox').style.display='none';document.getElementById('uploadbox').style.display='block';render()}else document.getElementById('loginerror').textContent='PIN match nahi hua. Demo PIN 2580 hai.'}
+function login(){if(document.getElementById('pin').value==='2580'){owner=true;document.getElementById('loginbox').style.display='none';document.getElementById('uploadbox').style.display='block';render()}else document.getElementById('loginerror').textContent='Incorrect PIN. The demo PIN is 2580.'}
 function logout(){owner=false;document.getElementById('loginbox').style.display='block';document.getElementById('uploadbox').style.display='none';document.getElementById('pin').value='';render()}
-document.getElementById('photo').addEventListener('change',e=>{const f=e.target.files[0];if(!f){photoData='';return}if(f.size>1.5*1024*1024){alert('Demo ke liye 1.5 MB se chhoti photo choose karein.');e.target.value='';photoData='';return}const r=new FileReader();r.onload=()=>{photoData=r.result;const im=document.getElementById('preview');im.src=photoData;im.style.display='block'};r.readAsDataURL(f)});
-document.getElementById('productform').addEventListener('submit',e=>{e.preventDefault();if(!owner)return;if(!photoData){alert('Pehle jewellery photo select karein.');return}const p={id:'p'+Date.now(),name:document.getElementById('name').value.trim(),code:document.getElementById('code').value.trim(),category:document.getElementById('category').value,details:document.getElementById('details').value.trim(),image:photoData};products.unshift(p);if(save()){e.target.reset();photoData='';document.getElementById('preview').style.display='none';active='All';renderCats();render();alert('Design catalogue mein add ho gaya (is browser par).')}});
-function removeProduct(id){if(!owner)return;if(confirm('Is design ko demo catalogue se delete karein?')){products=products.filter(p=>p.id!==id);save();render()}}
-function whatsapp(id){const p=products.find(x=>x.id===id);if(!p)return;const msg=`Namaste Laxmi Jewellers, mujhe aapka design pasand aaya hai.\nDesign: ${p.name}\nDesign Code: ${p.code}\nKripya price aur availability bataiye.`;const phone=prompt('Shop ka WhatsApp number country code ke saath enter karein (India: 91 ke baad number).','');if(phone===null)return;const n=phone.replace(/\D/g,'');if(n.length<10){alert('Sahi WhatsApp number enter karein.');return}window.open('https://wa.me/'+n+'?text='+encodeURIComponent(msg),'_blank')}
+document.getElementById('photo').addEventListener('change',e=>{const f=e.target.files[0];if(!f){photoData='';return}if(f.size>1.5*1024*1024){alert('Please choose an image smaller than 1.5 MB for this demo.');e.target.value='';photoData='';return}const r=new FileReader();r.onload=()=>{photoData=r.result;const im=document.getElementById('preview');im.src=photoData;im.style.display='block'};r.readAsDataURL(f)});
+document.getElementById('productform').addEventListener('submit',e=>{e.preventDefault();if(!owner)return;if(!photoData){alert('Please select a jewellery photo first.');return}const p={id:'p'+Date.now(),name:document.getElementById('name').value.trim(),code:document.getElementById('code').value.trim(),category:document.getElementById('category').value,details:document.getElementById('details').value.trim(),image:photoData};products.unshift(p);if(save()){e.target.reset();photoData='';document.getElementById('preview').style.display='none';active='All';renderCats();render();alert('Design added to the catalogue on this browser.')}});
+function removeProduct(id){if(!owner)return;if(confirm('Delete this design from the demo catalogue?')){products=products.filter(p=>p.id!==id);save();render()}}
+const SHOP_WHATSAPP='919704185153';
+function whatsapp(id){const p=products.find(x=>x.id===id);if(!p)return;const msg=`Hello Laxmi Jewellers, I am interested in this design.\nDesign: ${p.name}\nDesign Code: ${p.code}\nPlease share the price and availability.`;window.open('https://wa.me/'+SHOP_WHATSAPP+'?text='+encodeURIComponent(msg),'_blank')}
 function openDesign(id){const p=products.find(x=>x.id===id);if(!p)return;document.getElementById('modalname').textContent=p.name+' · '+p.code;document.getElementById('modalphoto').src=p.image;document.getElementById('modalinfo').textContent=p.category+(p.details?' · '+p.details:'');document.getElementById('modalwa').onclick=()=>whatsapp(id);document.getElementById('modal').classList.add('open')}
 function closeModal(){document.getElementById('modal').classList.remove('open')}
 document.getElementById('year').textContent=new Date().getFullYear();renderCats();render();
